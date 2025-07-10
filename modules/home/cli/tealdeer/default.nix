@@ -7,15 +7,14 @@
 lib.${namespace}.mkModule {
   inherit config;
   path = [
-    "services"
-    "ssh"
+    "cli"
+    "tealdeer"
   ];
+  default = true;
   output = {
-    services.openssh = {
+    programs.tealdeer = {
       enable = true;
-      ports = [22];
+      enableAutoUpdates = true;
     };
-
-    # TODO: Store publicKey
   };
 }

@@ -15,7 +15,7 @@ lib.${namespace}.mkModule {
     programs.jujutsu = {
       enable = true;
       settings = {
-        user = lib.optionalAttrs (config.${namespace}.cli.git.enable) {
+        user = lib.optionalAttrs config.${namespace}.cli.git.enable {
           email = config.programs.git.userEmail;
           name = config.programs.git.userName;
         };

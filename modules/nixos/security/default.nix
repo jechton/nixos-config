@@ -2,7 +2,6 @@
   lib,
   config,
   namespace,
-  pkgs,
   ...
 }:
 lib.${namespace}.mkModule {
