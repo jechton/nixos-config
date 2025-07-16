@@ -22,6 +22,7 @@ lib.${namespace}.mkModule {
         style = "compact";
         show_hekp = false;
         inline_height = 5;
+        search_mode = "skim";
       };
     };
   };
