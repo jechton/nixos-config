@@ -13,10 +13,13 @@ lib.${namespace}.mkModule {
   ];
   output = {
     boot = {
-      loader.grub = {
-        enable = true;
-        device = "/dev/vda";
-        useOSProber = true;
+      loader = {
+        systemd-boot = {
+          enable = true;
+          editor = lib.mkDefault false;
+          configurationLimit = 5;
+        };
+        efi.canTouchEfiVariables = true;
       };
       kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
       kernelParams = [
