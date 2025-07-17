@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "tealdeer"
   ];
-  default = true;
   output = {
     programs.tealdeer = {
       enable = true;

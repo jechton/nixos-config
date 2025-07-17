@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "skim"
   ];
-  default = true;
   output = {
     programs.skim = {
       enable = true;

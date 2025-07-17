@@ -10,6 +10,5 @@ lib.${namespace}.mkModule {
     "cli"
     "ripgrep"
   ];
-  default = true;
   output = {programs.ripgrep.enable = true;};
 }

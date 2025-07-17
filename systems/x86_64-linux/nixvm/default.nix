@@ -5,9 +5,9 @@
 }: let
   inherit (lib.${namespace}) enabled;
 in {
-  imports = [./hardware.nix];
+  imports = [./hardware.nix ./disks.nix];
 
-  networking.hostName = "nixos";
+  networking.hostName = "nixvm";
 
   ${namespace} = {
     suites.common = enabled;

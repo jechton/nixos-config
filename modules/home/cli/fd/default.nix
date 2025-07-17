@@ -10,6 +10,5 @@ lib.${namespace}.mkModule {
     "cli"
     "fd"
   ];
-  default = true;
   output = {programs.fd.enable = true;};
 }

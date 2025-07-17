@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "atuin"
   ];
-  default = true;
   output = {
     programs.atuin = {
       enable = true;

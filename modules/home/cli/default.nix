@@ -23,11 +23,20 @@ in
     default = true;
     output = {
       ${namespace}.cli = {
+        atuin = enabled;
+        bat = enabled;
+        dircolors = enabled;
+        eza = enabled;
+        fd = enabled;
         fish = enabled;
+        fzf = enabled;
         git = enabled;
         helix = enabled;
         jj = enabled;
+        pazi = enabled;
+        skim = enabled;
         starship = enabled;
+        tealdeer = enabled;
       };
 
       home.packages = with pkgs; [

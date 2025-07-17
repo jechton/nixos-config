@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "eza"
   ];
-  default = true;
   output = {
     programs.eza = {
       enable = true;

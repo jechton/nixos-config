@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "fzf"
   ];
-  default = true;
   output = {
     programs.fzf = {
       enable = true;

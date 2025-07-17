@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "bat"
   ];
-  default = true;
   output = {
     programs.bat = {
       enable = true;

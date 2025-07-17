@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "dircolors"
   ];
-  default = true;
   output = {
     programs.dircolors = {
       enable = true;

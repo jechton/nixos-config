@@ -10,7 +10,6 @@ lib.${namespace}.mkModule {
     "cli"
     "pazi"
   ];
-  default = true;
   output = {
     programs.pazi = {
       enable = true;
