@@ -3,27 +3,30 @@
   config,
   namespace,
   ...
-}:
-lib.${namespace}.mkModule {
-  inherit config;
-  path = ["system"];
-  default = true;
-  output = {
-    ${namespace}.system = {
-      boot.enable = true;
-      locale.enable = true;
-      networking.enable = true;
-      nix.enable = true;
-      usb.enable = true;
+}: let
+  inherit (lib.${namespace}) enabled;
+in
+  lib.${namespace}.mkModule {
+    inherit config;
+    path = ["system"];
+    default = true;
+    output = {
+      ${namespace}.system = {
+        audio = enabled;
+        boot = enabled;
+        locale = enabled;
+        networking = enabled;
+        nix = enabled;
+        usb = enabled;
+      };
+
+      programs.nix-ld.enabled = true;
+
+      services = {
+        xserver.enabled = true;
+
+        displayManager.gdm.enabled = true;
+        desktopManager.gnome.enabled = true;
+      };
     };
-
-    programs.nix-ld.enable = true;
-
-    services = {
-      xserver.enable = true;
-
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
-    };
-  };
-}
+  }
