@@ -10,7 +10,7 @@ lib.${namespace}.mkModule {
   default = true;
   output = {
     ${namespace}.desktop = {
-      niri.enable = true;
+      sway.enable = true;
     };
     programs.alacritty.enable = true;
   };
