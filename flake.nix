@@ -48,12 +48,12 @@
       repo = "nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri = {
-      type = "github";
-      owner = "sodiboo";
-      repo = "niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # niri = {
+    #   type = "github";
+    #   owner = "sodiboo";
+    #   repo = "niri-flake";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     stylix = {
       type = "github";
       owner = "danth";
@@ -86,11 +86,11 @@
       };
 
       overlays = with inputs; [
-        niri.overlays.niri
+        # niri.overlays.niri
       ];
 
       systems.modules.nixos = with inputs; [
-        niri.nixosModules.niri
+        # niri.nixosModules.niri
         disko.nixosModules.default
         home-manager.nixosModules.home-manager
         nix-index-database.nixosModules.nix-index
@@ -99,6 +99,6 @@
 
       home.modules = with inputs; [];
 
-      templates = import ./templates {};
+      # templates = import ./templates {};
     };
 }
